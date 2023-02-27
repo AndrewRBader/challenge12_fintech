@@ -60,11 +60,28 @@ Using bulleted lists, describe the balanced accuracy scores and the precision an
 
 * Machine Learning Model 2:
   * Description of Model 2 Accuracy, Precision, and Recall scores.
+  * model 2 was a logistic regression model with resampled training data using random over sampler dependency
+    * Balanced Accuracy Score: 0.9937
+    * Precision:
+      * class 0 healthy loan: 1.00
+      * class 1 risky loan: 0.84
+    * Recall:
+      * class 0 healthy loan: 0.99
+      * class 1 risky loan: 0.99
+    * Description
+      * all of these scores are very high, even higher with the resampling
+      * the precision score for the risky loan was the lowest score at 0.84
 
 ## Summary
 
 Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
 * Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
+  The resampling method did improve the performance of the regression model. As seen above, the balanced accuracy score of the second machine learning model is higher, the precision and recall values are either the same or better except for the one specific presicion score for the class 1 group which is a hair lower. 
+
+* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? ) 
+
+  Performance does seem to depend on the problem being solved. In this case it's more important to predict the '1's relatively because that is the undersampled group. This is because, as stated in the initial propmt, healthy loans outnumber risky loans significantly. Also as we can see from the precision scores of both of these models, the risky loans have the lowest precision scores. This certainly needs to be considered in the analysis.
 
 If you do not recommend any of the models, please justify your reasoning.
+  
+  I do recommend these models.
