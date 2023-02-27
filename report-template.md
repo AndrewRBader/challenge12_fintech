@@ -37,6 +37,8 @@ The general stages of the machine learning process we employed include:
   - this is with a confusion matrix and classification report in our case
 
 * Briefly touch on any methods you used (e.g., `LogisticRegression`, or any resampling method).
+- We used the LogisticRegression(), RandomOverSampler(), methods for the fitting and modeling
+- the RandomOverSampler method was responsible for resampling the imbalanced credit data
 
 ## Results
 
@@ -44,8 +46,17 @@ Using bulleted lists, describe the balanced accuracy scores and the precision an
 
 * Machine Learning Model 1:
   * Description of Model 1 Accuracy, Precision, and Recall scores.
-
-
+  * model 1 was the logistic regression model with the original data
+    * Balanced Accuracy Score: 0.952
+    * Precision:
+      * class 0 healthy loan: 1.00
+      * class 1 risky loan: 0.85
+    * Recall:
+      * class 0 healthy loan: 0.99
+      * class 1 risky loan: 0.91
+    * Description:
+      * all of these scores were pretty high showing high accuracy, precision and recall for the groups
+      * the precision for the risky loan was the lowest score at 0.85
 
 * Machine Learning Model 2:
   * Description of Model 2 Accuracy, Precision, and Recall scores.
