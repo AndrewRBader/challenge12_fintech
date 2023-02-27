@@ -17,7 +17,24 @@ The financial information included in the data were loan size, interest rate, bo
 The variables we were trying to predict were loan status. We were looking at healthy loans and risky loans classified as '0' and '1'
 
 * Describe the stages of the machine learning process you went through as part of this analysis.
+The general stages of the machine learning process we employed include:
+1) read the respective ldata from the csv file (or other data source)
 
+2) separating the data into labels and features
+  - the features being the variables to be predicted and y being the independent variable/labels
+
+3) Checking the balance of the labels variable by using the variable count function
+
+4) splitting the data into training and testing datasets via the train_test_split function
+  - this involves splitting the data into X_train, X_test, y_train, and y_test variable assignments
+
+5) Creating the regression model for modeling and further predictions
+  - here we set up an instance of the model with a random state for seeding
+  - we then fit the model
+  - we then perform the prediction
+
+6) We evaluate the performance of the model
+  - this is with a confusion matrix and classification report in our case
 
 * Briefly touch on any methods you used (e.g., `LogisticRegression`, or any resampling method).
 
